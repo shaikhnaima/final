@@ -65,15 +65,20 @@ div img {
     padding: 20px;
 }
 
+img {
+    margin: 40px 0 40px 0;
+    border-radius: 100%;
+}
 
 h1 {
-    font-family: "Brush Script MT Italic","Kaushan Script", cursive, script;
+    font-family: "Brush Script MT Italic",'Pacifico', cursive, script;
     font-size: 40pt;
     color: #e0218a;
     text-align: center;
 }
 
 h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20pt;
     margin: 20px;
 }
@@ -86,11 +91,17 @@ h3 {
 }
 
 p {
-    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.75;
+    margin: 40px 20px 40px 20px;
+
 }
 
 div ul {
     margin-left: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.75;
+    margin-bottom: 20px;
 }
 
 .grid {
@@ -121,18 +132,86 @@ iframe {
     display: block;
     margin: 0 auto;}
 
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video iframe, .videos object, .video embed {
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:absolute;
+    }
+
+#myBtnContainer {
+    grid-column: span 1;
+    justify-self: center;
+}
+
+.btn {
+    background-color: white;
+}
+
+.container {
+    overflow: hidden;
+  }
+  
+  .filterDiv {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background to the active button */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
 
 @media screen and (min-width: 700px) {
     .grid {
         grid-template-columns: auto auto;
     }
+    #myBtnContainer {
+        grid-column: span 2;
+        justify-self: center;
+    }
     .menu {
         flex-direction: row;
         justify-content: space-around;
     }
-    iframe {
-        width: 400px;
-        height: 220px;
+    nav li {
+        padding: 15px;
     }
     .timeline-section ul li div {
         width: 25rem;
@@ -146,8 +225,16 @@ iframe {
     .grid {
         grid-template-columns: auto auto auto;
     }
+    #myBtnContainer {
+        grid-column: span 3;
+        justify-self: center;
+    }
     .menu {
-        justify-content: space-around;
+        align-content: right;
+    }
+    nav li {
+        padding: 20px;
+        border-radius: 0;
     }
 
   }
