@@ -35,7 +35,7 @@ nav li {
     align-items: center;
     margin: 5px;
     padding: 5px;
-    background-color: lavender;
+    background-color: floralwhite;
     border-radius: 25px;
 }
 
@@ -46,6 +46,7 @@ nav a {
 
 .current {
     background-color: white;
+    border-radius: 0;
 }
 
 .menu, .current {
